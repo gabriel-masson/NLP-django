@@ -1,0 +1,150 @@
+{
+  "intents": [
+    {
+      "tag": "o_que_e",
+      "patterns": [
+        "O que é chikungunya?",
+        "Me explique o que é chikungunya",
+        "Quais são os sintomas da chikungunya?"
+      ],
+      "responses": [
+        "Chikungunya é uma doença viral transmitida principalmente pelos mosquitos Aedes aegypti e Aedes albopictus. Caracteriza-se por febre alta de início súbito e dores intensas nas articulações, especialmente em mãos, pés, tornozelos e pulsos. Outros sintomas incluem dor de cabeça, dores musculares, manchas vermelhas na pele e fadiga."
+      ]
+    },
+    {
+      "tag": "transmissao",
+      "patterns": [
+        "Como ocorre a transmissão da chikungunya?",
+        "O vírus da chikungunya passa como?",
+        "Como o mosquito transmite chikungunya?"
+      ],
+      "responses": [
+        "A transmissão ocorre pela picada da fêmea infectada dos mosquitos Aedes aegypti e Aedes albopictus. O mosquito adquire o vírus ao picar uma pessoa infectada durante o período de viremia (quando o vírus circula no sangue)."
+      ]
+    },
+    {
+      "tag": "sintomas",
+      "patterns": [
+        "Quais são os sintomas da chikungunya?",
+        "O que a pessoa sente quando está com chikungunya?",
+        "Como saber se estou com chikungunya?"
+      ],
+      "responses": [
+        "Os principais sintomas são: febre alta de início súbito, dores intensas e inchaço nas articulações, dor de cabeça, dores musculares, manchas vermelhas na pele, fadiga, náuseas e vômitos. Em casos mais graves, pode haver manifestações atípicas, como problemas neurológicos e cardiovasculares."
+      ]
+    },
+    {
+      "tag": "incubacao",
+      "patterns": [
+        "Qual o período de incubação da chikungunya?",
+        "Depois de quanto tempo aparecem os sintomas da chikungunya?",
+        "Quanto tempo leva para a chikungunya se manifestar?"
+      ],
+      "responses": [
+        "O período de incubação varia de 2 a 12 dias após a picada do mosquito infectado. Em geral, os sintomas aparecem entre 4 e 7 dias após a exposição."
+      ]
+    },
+    {
+      "tag": "tratamento",
+      "patterns": [
+        "Qual o tratamento para chikungunya?",
+        "Existe remédio para chikungunya?",
+        "Como tratar chikungunya?"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para chikungunya. O tratamento é sintomático, focando no alívio da dor e da febre, com analgésicos e anti-inflamatórios. É importante evitar automedicação e procurar orientação médica."
+      ]
+    },
+    {
+      "tag": "sequelas",
+      "patterns": [
+        "A chikungunya pode deixar sequelas?",
+        "Quais são as complicações da chikungunya?",
+        "É verdade que as dores continuam depois da chikungunya?",
+        "Há sequelas da chikungunya?"
+      ],
+      "responses": [
+        "Em alguns casos, as dores articulares podem persistir por meses ou anos após a fase aguda, caracterizando a forma crônica da chikungunya. Isso é mais comum em idosos e pessoas com comorbidades."
+      ]
+    },
+    {
+      "tag": "diagnostico",
+      "patterns": [
+        "Como é feito o diagnóstico da chikungunya?",
+        "Qual exame detecta chikungunya?",
+        "Tem teste para saber se estou com chikungunya?"
+      ],
+      "responses": [
+        "O diagnóstico é clínico, baseado nos sintomas e histórico do paciente. Pode ser confirmado com exames laboratoriais como sorologia e RT-PCR, disponíveis no SUS."
+      ]
+    },
+    {
+      "tag": "vacina",
+      "patterns": [
+        "Existe vacina contra chikungunya?",
+        "Posso me vacinar contra chikungunya?",
+        "Já tem vacina para chikungunya no Brasil?"
+      ],
+      "responses": [
+        "Atualmente, não há vacina aprovada para uso público contra a chikungunya no Brasil. Pesquisas estão em andamento para o desenvolvimento de uma vacina eficaz."
+      ]
+    },
+    {
+      "tag": "prevencao",
+      "patterns": [
+        "Como prevenir chikungunya?",
+        "O que fazer para não pegar chikungunya?",
+        "Quais as formas de prevenção contra chikungunya?"
+      ],
+      "responses": [
+        "As principais formas de prevenção são: eliminar criadouros do mosquito (evitar água parada), usar repelentes aprovados pela Anvisa, instalar telas em portas e janelas, usar roupas que cubram o corpo e dormir com mosquiteiros."
+      ]
+    },
+    {
+      "tag": "transmissao_pessoa_pessoa",
+      "patterns": [
+        "Chikungunya passa de uma pessoa para outra?",
+        "É possível pegar chikungunya de alguém?",
+        "Chikungunya é contagiosa?"
+      ],
+      "responses": [
+        "Não. A chikungunya é transmitida exclusivamente pela picada de mosquitos infectados. Não há transmissão direta entre pessoas. No entanto, pode haver transmissão vertical (de mãe para filho) durante o parto."
+      ]
+    },
+    {
+      "tag": "evolucao",
+      "patterns": [
+        "Como evolui a chikungunya?",
+        "Quais são as fases da chikungunya?",
+        "A chikungunya tem fases?"
+      ],
+      "responses": [
+        "Sim. A chikungunya evolui em três fases: Aguda (0 a 15 dias após o início dos sintomas), caracterizada por febre alta e dores articulares intensas; Subaguda (16 a 90 dias), quando os sintomas começam a diminuir, mas ainda podem persistir; e Crônica (a partir de 91 dias), com possibilidade de dores articulares prolongadas e outras complicações persistentes."
+      ]
+    },
+    {
+      "tag": "consequencias_cronica",
+      "patterns": [
+        "Quais as consequências da chikungunya crônica?",
+        "A fase crônica da chikungunya é perigosa?",
+        "O que pode acontecer na chikungunya crônica?"
+      ],
+      "responses": [
+        "A chikungunya crônica pode causar dores articulares persistentes, limitação de movimentos, depressão, impacto psicológico, prejuízos na qualidade de vida, afastamento do trabalho e, em casos graves, até aposentadoria por invalidez. Idosos e pessoas com doenças pré-existentes são mais suscetíveis às complicações prolongadas."
+      ]
+    },
+    {
+      "tag": "grupo_de_risco",
+      "patterns": [
+        "Quais são os grupos de risco para a chikungunya?",
+        "idosos, gestantes, recém-nascidos são grupo de risco?",
+        "recém-nascidos  são grupo de risco?",
+        "idosos,  são grupo de risco?",
+        "gestantes,  são grupo de risco?"
+      ],
+      "responses": [
+        "Idosos, gestantes, recém-nascidos, pessoas com doenças crônicas e imunossuprimidos fazem parte do grupo de risco para chikungunya. Nesses casos, há maior chance de complicações, como dores articulares prolongadas e problemas neurológicos. A prevenção da picada do mosquito *Aedes aegypti* e o acompanhamento médico são essenciais."
+      ]
+    }
+  ]
+}

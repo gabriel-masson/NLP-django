@@ -1,0 +1,112 @@
+{
+  "intents": [
+    {
+      "tag": "definicao_arboviroses",
+      "dominio": "arboviroses",
+      "patterns": [
+        "O que são arboviroses?",
+        "Como as arboviroses são transmitidas?",
+        "Explique o que é uma arbovirose"
+      ],
+      "responses": [
+        "Arboviroses são doenças causadas por vírus transmitidos por artrópodes, como mosquitos. No Brasil, os principais vetores são os mosquitos do gênero Aedes, especialmente o Aedes aegypti, que transmite dengue, zika, chikungunya e febre amarela urbana."
+      ]
+    },
+    {
+      "tag": "diagnostico",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Como é feito o diagnóstico?",
+        "Como saber se estou com alguma arbovirose?",
+        "Existe exame para detectar dengue?"
+      ],
+      "responses": [
+        "O diagnóstico pode ser clínico, baseado nos sintomas, e laboratorial, por meio de exames como sorologia (detecção de anticorpos IgM e IgG), RT-PCR e testes rápidos."
+      ]
+    },
+    {
+      "tag": "doenca_negligenciada",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Abroviroses são doenças tropicais negligênciadas?",
+        "o que são doenças tropicais negligênciadas?"
+      ],
+      "responses": [
+        "As arboviroses como dengue, Zika e chikungunya são consideradas doenças tropicais negligenciadas, especialmente em regiões de baixa renda. Apesar do grande impacto na saúde pública, elas historicamente receberam menos investimentos em pesquisa, prevenção e tratamento do que outras doenças."
+      ]
+    },
+    {
+      "tag": "vacinas",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Existe vacina contra dengue?",
+        "Há vacina para zika ou chikungunya?",
+        "Posso me vacinar contra febre amarela?"
+      ],
+      "responses": [
+        "Em 2024, o Brasil passou a oferecer a vacina contra a dengue pelo SUS, disponível nas Unidades Básicas de Saúde e com eficácia comprovada. Para Zika e Chikungunya, ainda não há vacinas disponíveis para uso público."
+      ]
+    },
+    {
+      "tag": "prevencao",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Como se proteger dessas doenças?",
+        "Dicas para prevenir arboviroses?",
+        "O que fazer para previnir?",
+        "Dicas de prevenção contra arboviroses"
+      ],
+      "responses": [
+        "Eliminar criadouros do mosquito, evitando água parada em recipientes.\n\nUsar repelentes aprovados pela Anvisa.\n\nInstalar telas em portas e janelas.\n\nUtilizar mosquiteiros, especialmente durante o sono."
+      ]
+    },
+    {
+      "tag": "quando_procurar_medico",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Quando devo ir ao médico?",
+        "Quando procurar atendimento médico?",
+        "Quais sinais indicam que devo buscar ajuda médica?"
+      ],
+      "responses": [
+        "Ao apresentar sintomas como febre alta, dores intensas no corpo, manchas na pele, vômitos persistentes ou sinais de desidratação, é fundamental procurar uma unidade de saúde para avaliação e tratamento adequados."
+      ]
+    },
+    {
+      "tag": "outras_doencas",
+      "dominio": "arboviroses",
+      "patterns": [
+        "Quais outras doenças o Aedes aegypti transmite?",
+        "O mosquito transmite apenas dengue, zika e chikungunya?",
+        "Aedes aegypti transmite febre amarela?"
+      ],
+      "responses": [
+        "Além da dengue, zika e chikungunya, o Aedes aegypti também pode transmitir a febre amarela urbana."
+      ]
+    },
+    {
+      "tag": "agua_suja",
+      "dominio": "arboviroses",
+      "patterns": [
+        "O Aedes se reproduz em água suja?",
+        "Mosquito da dengue gosta de água suja?",
+        "É verdade que o mosquito pode usar água suja?"
+      ],
+      "responses": [
+        "O Aedes aegypti pode se adaptar e utilizar água suja para reprodução, especialmente em ambientes urbanos."
+      ]
+    },
+    {
+      "tag": "brasil",
+      "dominio": "arboviroses",
+      "patterns": [
+        "arboviroses no Brasil",
+        "Por que no Brasil há uma alto numero de casos reportados",
+        "Porque no Brasil"
+      ],
+      "responses": [
+        "As arboviroses no Brasil — como dengue, Zika e chikungunya — representam um importante problema de saúde pública. Transmitidas principalmente pelo mosquito Aedes aegypti, essas doenças afetam milhares de pessoas todos os anos, com surtos recorrentes em diversas regiões do país, especialmente nas épocas mais quentes e chuvosas."
+      ]
+    }
+  ]
+}

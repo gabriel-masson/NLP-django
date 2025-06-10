@@ -1,0 +1,139 @@
+{
+  "intents": [
+    {
+      "tag": "o_que_e",
+      "patterns": [
+        "O que é o vírus Zika?",
+        "O que é a Zika?",
+        "Explique o que é Zika",
+        "Você pode me dizer o que é o vírus Zika?"
+      ],
+      "responses": [
+        "O Zika é um vírus transmitido principalmente pela picada do mosquito *Aedes aegypti*. A infecção costuma ser leve e pode causar febre baixa, erupções cutâneas, dores nas articulações e conjuntivite. Em muitos casos, as pessoas não apresentam sintomas."
+      ]
+    },
+    {
+      "tag": "sintomas",
+      "patterns": [
+        "Quais são os sintomas do Zika?",
+        "Como sei se estou com Zika?",
+        "Sintomas do vírus Zika"
+      ],
+      "responses": [
+        "Os sintomas mais comuns do Zika são: febre baixa, erupções cutâneas, conjuntivite não purulenta, dores musculares e articulares, dor de cabeça e mal-estar geral. Eles geralmente surgem entre 2 a 7 dias após a picada do mosquito infectado."
+      ]
+    },
+    {
+      "tag": "transmissao",
+      "patterns": [
+        "Como o Zika é transmitido?",
+        "Formas de transmissão do vírus Zika",
+        "Quais são os meios de transmissão do Zika?"
+      ],
+      "responses": [
+        "O vírus Zika é transmitido principalmente pela picada do mosquito *Aedes aegypti*. Também pode ser transmitido por via sexual, de mãe para o feto durante a gravidez e por transfusão de sangue. Não há evidências de transmissão por contato direto entre pessoas."
+      ]
+    },
+    {
+      "tag": "periodo_incubacao",
+      "patterns": [
+        "Qual é o período de incubação do Zika?",
+        "Quanto tempo o Zika leva para manifestar sintomas?",
+        "Depois da picada, quanto tempo até os sintomas do Zika aparecerem?"
+      ],
+      "responses": [
+        "O período de incubação do vírus Zika varia de 2 a 7 dias após a exposição. A viremia geralmente ocorre do início dos sintomas até o 5º dia da doença."
+      ]
+    },
+    {
+      "tag": "diagnostico",
+      "patterns": [
+        "Como é feito o diagnóstico do Zika?",
+        "Como saber se estou com Zika?",
+        "Existe exame para Zika?"
+      ],
+      "responses": [
+        "O diagnóstico é baseado nos sintomas clínicos e histórico do paciente. Exames laboratoriais como RT-PCR e testes sorológicos podem confirmar a infecção. O RT-PCR é mais eficaz nos primeiros 3 a 5 dias após o início dos sintomas."
+      ]
+    },
+    {
+      "tag": "tratamento",
+      "patterns": [
+        "Existe tratamento para Zika?",
+        "Como tratar o Zika?",
+        "Medicamento para vírus Zika"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para o Zika. O tratamento é sintomático, com repouso, hidratação e uso de analgésicos como paracetamol ou dipirona. Evite anti-inflamatórios não esteroides devido ao risco de complicações."
+      ]
+    },
+    {
+      "tag": "gestantes",
+      "patterns": [
+        "Quais os riscos do Zika na gravidez?",
+        "O que acontece se grávida pegar Zika?",
+        "Zika na gestação é perigoso?"
+      ],
+      "responses": [
+        "A infecção pelo Zika durante a gravidez pode causar a Síndrome Congênita do Zika, que inclui microcefalia e outras alterações neurológicas no feto. O risco é maior no primeiro trimestre."
+      ]
+    },
+    {
+      "tag": "prevencao",
+      "patterns": [
+        "Como prevenir o Zika?",
+        "O que fazer para evitar o Zika?",
+        "Dicas para prevenir infecção por Zika"
+      ],
+      "responses": [
+        "Para prevenir a infecção por Zika: elimine criadouros do mosquito *Aedes aegypti*, use repelentes aprovados pela Anvisa, instale telas em portas e janelas e use preservativos para evitar a transmissão sexual. Gestantes devem redobrar os cuidados."
+      ]
+    },
+    {
+      "tag": "vacina",
+      "patterns": [
+        "Existe vacina contra o Zika?",
+        "Tem vacina para o vírus Zika?",
+        "Já criaram vacina para Zika?"
+      ],
+      "responses": [
+        "Atualmente, não há vacina aprovada para uso público contra o Zika. Pesquisas estão em andamento para o desenvolvimento de uma vacina eficaz."
+      ]
+    },
+    {
+      "tag": "sequelas",
+      "patterns": [
+        "Quais são consequências da zika",
+        "A zika pode causar alguma sequela?",
+        "Existe alguma  sequela associada a zika?"
+      ],
+      "responses": [
+        "A infecção pelo Zika pode desencadear a Síndrome de Guillain-Barré, uma condição neurológica rara que causa fraqueza muscular e paralisia. Essa relação foi observada durante surtos do vírus e ainda está sendo estudada."
+      ]
+    },
+    {
+      "tag": "guillain_barre",
+      "patterns": [
+        "Qual é a relação entre Zika e Síndrome de Guillain-Barré?",
+        "Zika pode causar Guillain-Barré?",
+        "O que é a síndrome de Guillain-Barré relacionada ao Zika?"
+      ],
+      "responses": [
+        "A Síndrome de Guillain-Barré (SGB) não é considerada uma fase crônica da doença, mas sim uma complicação neurológica rara e aguda. geralmente ocorre entre alguns dias a até 4 semanas após uma infecção. Ela é resultado de uma resposta autoimune desregulada, em que o sistema imunológico ataca os nervos periféricos do próprio corpo."
+      ]
+    },
+    {
+      "tag": "grupo_de_risco",
+      "patterns": [
+        "Quais são os grupos de risco?",
+        "crianças pequenas são grupo de riscos?",
+        "idosos são grupo de riscos?",
+        "imunossuprimidos estão no grupo de risco",
+        "pessoas que já tiveram dengue anteriormente estão no grupo de risco?"
+      ],
+      "responses": [
+        "Os principais grupos de risco para a dengue incluem crianças pequenas, idosos, gestantes, pessoas com doenças crônicas (como diabetes e hipertensão), imunossuprimidos e indivíduos que já tiveram dengue anteriormente. Esses grupos têm maior chance de desenvolver formas graves da doença, com risco de sangramentos, choque e complicações, sendo essencial o acompanhamento médico."
+      ]
+    }
+  ]
+}

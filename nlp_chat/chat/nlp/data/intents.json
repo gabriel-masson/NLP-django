@@ -1,0 +1,447 @@
+{
+  "intents": [
+    {
+      "tag": "definicao_arboviroses",
+      "patterns": [
+        "O que são arboviroses?",
+        "Como as arboviroses são transmitidas?",
+        "Explique o que é uma arbovirose"
+      ],
+      "responses": [
+        "Arboviroses são doenças causadas por vírus transmitidos por artrópodes, como mosquitos. No Brasil, os principais vetores são os mosquitos do gênero Aedes, especialmente o Aedes aegypti, que transmite dengue, zika, chikungunya e febre amarela urbana."
+      ]
+    },
+
+    {
+      "tag": "diagnostico",
+      "patterns": [
+        "Como é feito o diagnóstico?",
+        "Como saber se estou com alguma arbovirose?",
+        "Existe exame para detectar dengue?"
+      ],
+      "responses": [
+        "O diagnóstico pode ser clínico, baseado nos sintomas, e laboratorial, por meio de exames como sorologia (detecção de anticorpos IgM e IgG), RT-PCR e testes rápidos."
+      ]
+    },
+    {
+      "tag": "vacinas",
+      "patterns": [
+        "Existe vacina contra dengue?",
+        "Há vacina para zika ou chikungunya?",
+        "Posso me vacinar contra febre amarela?"
+      ],
+      "responses": [
+        "Dengue: O Brasil incorporou em 2024 a vacina contra dengue no Sistema Único de Saúde (SUS).\n\nFebre Amarela: Sim, a vacina é eficaz e está disponível nas Unidades Básicas de Saúde.\n\nZika e Chikungunya: Atualmente, não há vacinas disponíveis para uso público."
+      ]
+    },
+    {
+      "tag": "prevencao",
+      "patterns": [
+        "Como se proteger dessas doenças?",
+        "Como evitar pegar dengue?",
+        "Dicas para prevenir arboviroses"
+      ],
+      "responses": [
+        "Eliminar criadouros do mosquito, evitando água parada em recipientes.\n\nUsar repelentes aprovados pela Anvisa.\n\nInstalar telas em portas e janelas.\n\nUtilizar mosquiteiros, especialmente durante o sono."
+      ]
+    },
+    {
+      "tag": "gestantes",
+      "patterns": [
+        "Zika é perigoso para gestantes?",
+        "Quais os riscos da zika na gravidez?",
+        "Gestante pode ter complicações com arboviroses?"
+      ],
+      "responses": [
+        "A infecção por zika durante a gestação pode causar microcefalia e outras malformações congênitas no bebê. Gestantes devem redobrar os cuidados para evitar a picada do mosquito."
+      ]
+    },
+    {
+      "tag": "dengue_reinfeccao",
+      "patterns": [
+        "Posso ter dengue mais de uma vez?",
+        "Existe mais de um tipo de dengue?",
+        "Já tive dengue, posso pegar de novo?"
+      ],
+      "responses": [
+        "Existem quatro sorotipos do vírus da dengue (DENV-1 a DENV-4). A infecção por um sorotipo confere imunidade apenas contra ele, permitindo infecções subsequentes por outros sorotipos."
+      ]
+    },
+    {
+      "tag": "agua_suja",
+      "patterns": [
+        "O Aedes se reproduz em água suja?",
+        "Mosquito da dengue gosta de água suja?",
+        "É verdade que o mosquito pode usar água suja?"
+      ],
+      "responses": [
+        "O Aedes aegypti pode se adaptar e utilizar água suja para reprodução, especialmente em ambientes urbanos."
+      ]
+    },
+    {
+      "tag": "quando_procurar_medico",
+      "patterns": [
+        "Quando devo ir ao médico?",
+        "Quando procurar atendimento médico?",
+        "Quais sinais indicam que devo buscar ajuda médica?"
+      ],
+      "responses": [
+        "Ao apresentar sintomas como febre alta, dores intensas no corpo, manchas na pele, vômitos persistentes ou sinais de desidratação, é fundamental procurar uma unidade de saúde para avaliação e tratamento adequados."
+      ]
+    },
+    {
+      "tag": "outras_doencas",
+      "patterns": [
+        "Quais outras doenças o Aedes aegypti transmite?",
+        "O mosquito transmite apenas dengue, zika e chikungunya?",
+        "Aedes aegypti transmite febre amarela?"
+      ],
+      "responses": [
+        "Além da dengue, zika e chikungunya, o Aedes aegypti também pode transmitir a febre amarela urbana."
+      ]
+    },
+    {
+      "tag": "o_que_e_chikungunya",
+      "patterns": [
+        "O que é chikungunya?",
+        "Me explique o que é chikungunya",
+        "Quais são os sintomas da chikungunya?"
+      ],
+      "responses": [
+        "Chikungunya é uma doença viral transmitida principalmente pelos mosquitos Aedes aegypti e Aedes albopictus. Caracteriza-se por febre alta de início súbito e dores intensas nas articulações, especialmente em mãos, pés, tornozelos e pulsos. Outros sintomas incluem dor de cabeça, dores musculares, manchas vermelhas na pele e fadiga."
+      ]
+    },
+    {
+      "tag": "transmissao_chikungunya",
+      "patterns": [
+        "Como ocorre a transmissão da chikungunya?",
+        "O vírus da chikungunya passa como?",
+        "Como o mosquito transmite chikungunya?"
+      ],
+      "responses": [
+        "A transmissão ocorre pela picada da fêmea infectada dos mosquitos Aedes aegypti e Aedes albopictus. O mosquito adquire o vírus ao picar uma pessoa infectada durante o período de viremia (quando o vírus circula no sangue)."
+      ]
+    },
+    {
+      "tag": "sintomas_chikungunya",
+      "patterns": [
+        "Quais são os sintomas da chikungunya?",
+        "O que a pessoa sente quando está com chikungunya?",
+        "Como saber se estou com chikungunya?"
+      ],
+      "responses": [
+        "Os principais sintomas são: febre alta de início súbito, dores intensas e inchaço nas articulações, dor de cabeça, dores musculares, manchas vermelhas na pele, fadiga, náuseas e vômitos. Em casos mais graves, pode haver manifestações atípicas, como problemas neurológicos e cardiovasculares."
+      ]
+    },
+    {
+      "tag": "incubacao_chikungunya",
+      "patterns": [
+        "Qual o período de incubação da chikungunya?",
+        "Depois de quanto tempo aparecem os sintomas da chikungunya?",
+        "Quanto tempo leva para a chikungunya se manifestar?"
+      ],
+      "responses": [
+        "O período de incubação varia de 2 a 12 dias após a picada do mosquito infectado. Em geral, os sintomas aparecem entre 4 e 7 dias após a exposição."
+      ]
+    },
+    {
+      "tag": "tratamento_chikungunya",
+      "patterns": [
+        "Qual o tratamento para chikungunya?",
+        "Existe remédio para chikungunya?",
+        "Como tratar chikungunya?"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para chikungunya. O tratamento é sintomático, focando no alívio da dor e da febre, com analgésicos e anti-inflamatórios. É importante evitar automedicação e procurar orientação médica."
+      ]
+    },
+    {
+      "tag": "sequelas_chikungunya",
+      "patterns": [
+        "A chikungunya pode deixar sequelas?",
+        "Quais são as complicações da chikungunya?",
+        "É verdade que as dores continuam depois da chikungunya?",
+        "Há sequelas da chikungunya?"
+      ],
+      "responses": [
+        "Em alguns casos, as dores articulares podem persistir por meses ou anos após a fase aguda, caracterizando a forma crônica da chikungunya. Isso é mais comum em idosos e pessoas com comorbidades."
+      ]
+    },
+    {
+      "tag": "diagnostico_chikungunya",
+      "patterns": [
+        "Como é feito o diagnóstico da chikungunya?",
+        "Qual exame detecta chikungunya?",
+        "Tem teste para saber se estou com chikungunya?"
+      ],
+      "responses": [
+        "O diagnóstico é clínico, baseado nos sintomas e histórico do paciente. Pode ser confirmado com exames laboratoriais como sorologia e RT-PCR, disponíveis no SUS."
+      ]
+    },
+    {
+      "tag": "vacina_chikungunya",
+      "patterns": [
+        "Existe vacina contra chikungunya?",
+        "Posso me vacinar contra chikungunya?",
+        "Já tem vacina para chikungunya no Brasil?"
+      ],
+      "responses": [
+        "Atualmente, não há vacina aprovada para uso público contra a chikungunya no Brasil. Pesquisas estão em andamento para o desenvolvimento de uma vacina eficaz."
+      ]
+    },
+    {
+      "tag": "prevencao_chikungunya",
+      "patterns": [
+        "Como prevenir chikungunya?",
+        "O que fazer para não pegar chikungunya?",
+        "Quais as formas de prevenção contra chikungunya?"
+      ],
+      "responses": [
+        "As principais formas de prevenção são: eliminar criadouros do mosquito (evitar água parada), usar repelentes aprovados pela Anvisa, instalar telas em portas e janelas, usar roupas que cubram o corpo e dormir com mosquiteiros."
+      ]
+    },
+    {
+      "tag": "transmissao_pessoa_pessoa",
+      "patterns": [
+        "Chikungunya passa de uma pessoa para outra?",
+        "É possível pegar chikungunya de alguém?",
+        "Chikungunya é contagiosa?"
+      ],
+      "responses": [
+        "Não. A chikungunya é transmitida exclusivamente pela picada de mosquitos infectados. Não há transmissão direta entre pessoas. No entanto, pode haver transmissão vertical (de mãe para filho) durante o parto."
+      ]
+    },
+    {
+      "tag": "evolucao_chikungunya",
+      "patterns": [
+        "Como evolui a chikungunya?",
+        "Quais são as fases da chikungunya?",
+        "A chikungunya tem fases?"
+      ],
+      "responses": [
+        "Sim. A chikungunya evolui em três fases: Aguda (0 a 15 dias após o início dos sintomas), caracterizada por febre alta e dores articulares intensas; Subaguda (16 a 90 dias), quando os sintomas começam a diminuir, mas ainda podem persistir; e Crônica (a partir de 91 dias), com possibilidade de dores articulares prolongadas e outras complicações persistentes."
+      ]
+    },
+    {
+      "tag": "consequencias_chikungunya_cronica",
+      "patterns": [
+        "Quais as consequências da chikungunya crônica?",
+        "A fase crônica da chikungunya é perigosa?",
+        "O que pode acontecer na chikungunya crônica?"
+      ],
+      "responses": [
+        "A chikungunya crônica pode causar dores articulares persistentes, limitação de movimentos, depressão, impacto psicológico, prejuízos na qualidade de vida, afastamento do trabalho e, em casos graves, até aposentadoria por invalidez. Idosos e pessoas com doenças pré-existentes são mais suscetíveis às complicações prolongadas."
+      ]
+    },
+    {
+      "tag": "o_que_e_zika",
+      "patterns": [
+        "O que é o vírus Zika?",
+        "Explique o que é Zika",
+        "Você pode me dizer o que é o vírus Zika?"
+      ],
+      "responses": [
+        "O Zika é um vírus transmitido principalmente pela picada do mosquito *Aedes aegypti*. A infecção costuma ser leve e pode causar febre baixa, erupções cutâneas, dores nas articulações e conjuntivite. Em muitos casos, as pessoas não apresentam sintomas."
+      ]
+    },
+    {
+      "tag": "sintomas_zika",
+      "patterns": [
+        "Quais são os sintomas do Zika?",
+        "Como sei se estou com Zika?",
+        "Sintomas do vírus Zika"
+      ],
+      "responses": [
+        "Os sintomas mais comuns do Zika são: febre baixa, erupções cutâneas, conjuntivite não purulenta, dores musculares e articulares, dor de cabeça e mal-estar geral. Eles geralmente surgem entre 2 a 7 dias após a picada do mosquito infectado."
+      ]
+    },
+    {
+      "tag": "transmissao_zika",
+      "patterns": [
+        "Como o Zika é transmitido?",
+        "Formas de transmissão do vírus Zika",
+        "Quais são os meios de transmissão do Zika?"
+      ],
+      "responses": [
+        "O vírus Zika é transmitido principalmente pela picada do mosquito *Aedes aegypti*. Também pode ser transmitido por via sexual, de mãe para o feto durante a gravidez e por transfusão de sangue. Não há evidências de transmissão por contato direto entre pessoas."
+      ]
+    },
+    {
+      "tag": "periodo_incubacao",
+      "patterns": [
+        "Qual é o período de incubação do Zika?",
+        "Quanto tempo o Zika leva para manifestar sintomas?",
+        "Depois da picada, quanto tempo até os sintomas do Zika aparecerem?"
+      ],
+      "responses": [
+        "O período de incubação do vírus Zika varia de 2 a 7 dias após a exposição. A viremia geralmente ocorre do início dos sintomas até o 5º dia da doença."
+      ]
+    },
+    {
+      "tag": "diagnostico_zika",
+      "patterns": [
+        "Como é feito o diagnóstico do Zika?",
+        "Como saber se estou com Zika?",
+        "Existe exame para Zika?"
+      ],
+      "responses": [
+        "O diagnóstico é baseado nos sintomas clínicos e histórico do paciente. Exames laboratoriais como RT-PCR e testes sorológicos podem confirmar a infecção. O RT-PCR é mais eficaz nos primeiros 3 a 5 dias após o início dos sintomas."
+      ]
+    },
+    {
+      "tag": "tratamento_zika",
+      "patterns": [
+        "Existe tratamento para Zika?",
+        "Como tratar o Zika?",
+        "Medicamento para vírus Zika"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para o Zika. O tratamento é sintomático, com repouso, hidratação e uso de analgésicos como paracetamol ou dipirona. Evite anti-inflamatórios não esteroides devido ao risco de complicações."
+      ]
+    },
+    {
+      "tag": "zika_na_gestacao",
+      "patterns": [
+        "Quais os riscos do Zika na gravidez?",
+        "O que acontece se grávida pegar Zika?",
+        "Zika na gestação é perigoso?",
+        "Há preoblemas com Zika na gravidez?"
+      ],
+      "responses": [
+        "A infecção pelo Zika durante a gravidez pode causar a Síndrome Congênita do Zika, que inclui microcefalia e outras alterações neurológicas no feto. O risco é maior no primeiro trimestre."
+      ]
+    },
+    {
+      "tag": "prevencao_zika",
+      "patterns": [
+        "Como prevenir o Zika?",
+        "O que fazer para evitar o Zika?",
+        "Dicas para prevenir infecção por Zika"
+      ],
+      "responses": [
+        "Para prevenir a infecção por Zika: elimine criadouros do mosquito *Aedes aegypti*, use repelentes aprovados pela Anvisa, instale telas em portas e janelas e use preservativos para evitar a transmissão sexual. Gestantes devem redobrar os cuidados."
+      ]
+    },
+    {
+      "tag": "vacina_zika",
+      "patterns": [
+        "Existe vacina contra o Zika?",
+        "Tem vacina para o vírus Zika?",
+        "Já criaram vacina para Zika?"
+      ],
+      "responses": [
+        "Atualmente, não há vacina aprovada para uso público contra o Zika. Pesquisas estão em andamento para o desenvolvimento de uma vacina eficaz."
+      ]
+    },
+    {
+      "tag": "guillain_barre",
+      "patterns": [
+        "Qual é a relação entre Zika e Síndrome de Guillain-Barré?",
+        "Zika pode causar Guillain-Barré?",
+        "O que é a síndrome de Guillain-Barré relacionada ao Zika?"
+      ],
+      "responses": [
+        "A infecção pelo Zika pode desencadear a Síndrome de Guillain-Barré, uma condição neurológica rara que causa fraqueza muscular e paralisia. Essa relação foi observada durante surtos do vírus e ainda está sendo estudada."
+      ]
+    },
+    {
+      "tag": "o_que_e_dengue",
+      "patterns": [
+        "O que é dengue?",
+        "Explique o que é a dengue",
+        "Qual a definição de dengue?"
+      ],
+      "responses": [
+        "A dengue é uma doença infecciosa viral causada por quatro sorotipos do vírus DENV (1 a 4), transmitida pela picada da fêmea do mosquito Aedes aegypti. É considerada uma arbovirose e representa um grande problema de saúde pública no Brasil e em outros países tropicais."
+      ]
+    },
+    {
+      "tag": "sintomas_dengue",
+      "patterns": [
+        "Quais são os sintomas da dengue?",
+        "Como saber se estou com dengue?",
+        "Sintomas de dengue"
+      ],
+      "responses": [
+        "Os sintomas mais comuns da dengue incluem: febre alta, dor de cabeça, dor atrás dos olhos, dores musculares e nas articulações, náuseas e vômitos, manchas vermelhas na pele e cansaço extremo. Em casos graves, podem ocorrer sangramentos e queda de pressão arterial."
+      ]
+    },
+    {
+      "tag": "transmissao_dengue",
+      "patterns": [
+        "Como ocorre a transmissão da dengue?",
+        "Como se pega dengue?",
+        "Dengue passa de pessoa para pessoa?"
+      ],
+      "responses": [
+        "A transmissão da dengue ocorre pela picada da fêmea do mosquito Aedes aegypti infectada com o vírus. A dengue não é transmitida de pessoa para pessoa."
+      ]
+    },
+    {
+      "tag": "periodo_incubacao_dengue",
+      "patterns": [
+        "Qual é o período de incubação da dengue?",
+        "Quanto tempo leva para aparecer os sintomas da dengue?",
+        "Incubação do vírus da dengue"
+      ],
+      "responses": [
+        "O período de incubação do vírus da dengue varia de 3 a 15 dias após a picada do mosquito infectado, sendo mais comum entre 4 e 7 dias."
+      ]
+    },
+    {
+      "tag": "tratamento_dengue",
+      "patterns": [
+        "Existe tratamento para dengue?",
+        "Como tratar a dengue?",
+        "Qual o remédio para dengue?"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para a dengue. O tratamento é sintomático, com repouso, hidratação e uso de analgésicos como paracetamol. Medicamentos como ácido acetilsalicílico (aspirina) e anti-inflamatórios não esteroides devem ser evitados devido ao risco de sangramentos."
+      ]
+    },
+    {
+      "tag": "sinais_alerta_dengue",
+      "patterns": [
+        "Quais são os sinais de alerta para dengue grave?",
+        "Como saber se a dengue está grave?",
+        "Sinais de dengue grave"
+      ],
+      "responses": [
+        "Os sinais de alerta para formas graves da dengue incluem: dor abdominal intensa, vômitos persistentes, sangramentos (nas gengivas, nariz, urina ou fezes), tontura ou desmaios e dificuldade para respirar. Ao apresentar esses sintomas, é fundamental procurar atendimento médico imediato."
+      ]
+    },
+    {
+      "tag": "grupos_risco_dengue",
+      "patterns": [
+        "Quem está mais suscetível à dengue grave?",
+        "Quais grupos têm mais risco com dengue?",
+        "Dengue grave em quem é mais comum?"
+      ],
+      "responses": [
+        "Pessoas com maior risco de desenvolver formas graves da dengue incluem: crianças menores de 2 anos, idosos, gestantes e pessoas com doenças crônicas, como diabetes e hipertensão. Nesses grupos, a dengue pode evoluir para formas mais graves com maior frequência."
+      ]
+    },
+    {
+      "tag": "prevencao_dengue",
+      "patterns": [
+        "Como prevenir a dengue?",
+        "O que fazer para evitar dengue?",
+        "Dicas de prevenção contra dengue"
+      ],
+      "responses": [
+        "As principais medidas de prevenção da dengue são: eliminar criadouros do mosquito evitando água parada, manter caixas d'água bem fechadas, limpar calhas e ralos regularmente, além de usar repelentes e telas em portas e janelas. A prevenção é a forma mais eficaz de combater a dengue."
+      ]
+    },
+    {
+      "tag": "vacina_dengue",
+      "patterns": [
+        "Existe vacina contra a dengue?",
+        "Tem vacina para dengue?",
+        "Quem pode tomar vacina da dengue?"
+      ],
+      "responses": [
+        "Existe uma vacina aprovada para uso no Brasil. No entanto, sua aplicação é recomendada para pessoas que já tiveram dengue anteriormente, com intervalo de seis meses após a infecção."
+      ]
+    }
+  ]
+}

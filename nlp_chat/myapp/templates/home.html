@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Valeria AI - Chat{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex flex-col items-center bg-gray-50">
+    <!-- Logo -->
+    <div class="mt-12 mb-6">
+        <img src="{% static 'images/val.png' %}" alt="Valeria AI" class="w-48 h-auto">
+    </div>
+    
+    <!-- Chat Container -->
+    <div class="flex-1 w-full max-w-4xl flex flex-col h-[calc(100vh-200px)]">
+        <!-- Messages Container -->
+        <div id="messagesContainer" class="flex-1 overflow-y-auto p-4 space-y-4 mb-4">
+            <!-- Messages will appear here -->
+        </div>
+        
+        <!-- Input Container -->
+        <div class="bg-white border-t border-gray-200 p-4">
+            <form id="chatForm" class="flex items-center space-x-2">
+                {% csrf_token %}
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="flex-1 border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Type your message here..."
+                    autocomplete="off"
+                    aria-label="Type your message"
+                >
+                <button 
+                    type="submit"
+                    id="sendButton" 
+                    class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label="Send message"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Include JavaScript -->
+<script src="{% static 'js/chat.js' %}"></script>
+
+<!-- Custom Styles -->
+<style>
+    /* Smooth scrolling for messages */
+    #messagesContainer {
+        scroll-behavior: smooth;
+    }
+    
+    /* Custom scrollbar */
+    #messagesContainer::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    #messagesContainer::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+    
+    #messagesContainer::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+    }
+    
+    #messagesContainer::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+    
+    /* Message bubbles */
+    .message {
+        max-width: 80%;
+        word-wrap: break-word;
+    }
+    
+    .message.user {
+        margin-left: auto;
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 1rem 1rem 0 1rem;
+    }
+    
+    .message.bot {
+        margin-right: auto;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        border-radius: 1rem 1rem 1rem 0;
+    }
+    
+    /* Typing indicator animation */
+    @keyframes typing {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+    }
+    
+    .typing-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #9ca3af;
+        margin: 0 2px;
+        animation: typing 1.4s infinite ease-in-out;
+    }
+    
+    .typing-dot:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    .typing-dot:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+</style>
+{% endblock %}

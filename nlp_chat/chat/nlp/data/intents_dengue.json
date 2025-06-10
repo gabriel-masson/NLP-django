@@ -1,0 +1,103 @@
+{
+  "intents": [
+    {
+      "tag": "o_que_e",
+      "patterns": [
+        "O que é dengue?",
+        "Explique o que é a dengue",
+        "Qual a definição de dengue?"
+      ],
+      "responses": [
+        "A dengue é uma doença infecciosa viral causada por quatro sorotipos do vírus DENV (1 a 4), transmitida pela picada da fêmea do mosquito Aedes aegypti. É considerada uma arbovirose e representa um grande problema de saúde pública no Brasil e em outros países tropicais."
+      ]
+    },
+    {
+      "tag": "sintomas",
+      "patterns": [
+        "Quais são os sintomas da dengue?",
+        "Como saber se estou com dengue?",
+        "Sintomas de dengue"
+      ],
+      "responses": [
+        "Os sintomas mais comuns da dengue incluem: febre alta, dor de cabeça, dor atrás dos olhos, dores musculares e nas articulações, náuseas e vômitos, manchas vermelhas na pele e cansaço extremo. Em casos graves, podem ocorrer sangramentos e queda de pressão arterial."
+      ]
+    },
+    {
+      "tag": "transmissao",
+      "patterns": [
+        "Como ocorre a transmissão da dengue?",
+        "Como se pega dengue?",
+        "Dengue passa de pessoa para pessoa?"
+      ],
+      "responses": [
+        "A transmissão da dengue ocorre pela picada da fêmea do mosquito Aedes aegypti infectada com o vírus. A dengue não é transmitida de pessoa para pessoa."
+      ]
+    },
+    {
+      "tag": "periodo_incubacao",
+      "patterns": [
+        "Qual é o período de incubação da dengue?",
+        "Quanto tempo leva para aparecer os sintomas da dengue?",
+        "Incubação do vírus da dengue"
+      ],
+      "responses": [
+        "O período de incubação do vírus da dengue varia de 3 a 15 dias após a picada do mosquito infectado, sendo mais comum entre 4 e 7 dias."
+      ]
+    },
+    {
+      "tag": "tratamento",
+      "patterns": [
+        "Existe tratamento para dengue?",
+        "Como tratar a dengue?",
+        "Qual o remédio para dengue?"
+      ],
+      "responses": [
+        "Não há tratamento antiviral específico para a dengue. O tratamento é sintomático, com repouso, hidratação e uso de analgésicos como paracetamol. Medicamentos como ácido acetilsalicílico (aspirina) e anti-inflamatórios não esteroides devem ser evitados devido ao risco de sangramentos."
+      ]
+    },
+    {
+      "tag": "sinais_alerta",
+      "patterns": [
+        "Quais são os sinais de alerta para dengue grave?",
+        "Como saber se a dengue está grave?",
+        "Sinais de dengue grave"
+      ],
+      "responses": [
+        "Os sinais de alerta para formas graves da dengue incluem: dor abdominal intensa, vômitos persistentes, sangramentos (nas gengivas, nariz, urina ou fezes), tontura ou desmaios e dificuldade para respirar. Ao apresentar esses sintomas, é fundamental procurar atendimento médico imediato."
+      ]
+    },
+    {
+      "tag": "grupos_risco",
+      "patterns": [
+        "Quem está mais suscetível à dengue grave?",
+        "Quais grupos têm mais risco com dengue?",
+        "Dengue grave em quem é mais comum?"
+      ],
+      "responses": [
+        "Pessoas com maior risco de desenvolver formas graves da dengue incluem: crianças menores de 2 anos, idosos, gestantes e pessoas com doenças crônicas, como diabetes e hipertensão. Nesses grupos, a dengue pode evoluir para formas mais graves com maior frequência."
+      ]
+    },
+    {
+      "tag": "prevencao",
+      "patterns": [
+        "Como prevenir a dengue?",
+        "O que fazer para evitar dengue?",
+        "Dicas de prevenção contra dengue"
+      ],
+      "responses": [
+        "As principais medidas de prevenção da dengue são: eliminar criadouros do mosquito evitando água parada, manter caixas d'água bem fechadas, limpar calhas e ralos regularmente, além de usar repelentes e telas em portas e janelas. A prevenção é a forma mais eficaz de combater a dengue."
+      ]
+    },
+    {
+      "tag": "vacina",
+      "patterns": [
+        "Existe vacina contra a dengue?",
+        "Tem vacina para dengue?",
+        "Quem pode tomar vacina da dengue?"
+      ],
+      "responses": [
+        "Existe uma vacina aprovada para uso no Brasil. No entanto, sua aplicação é recomendada para pessoas que já tiveram dengue anteriormente, com intervalo de seis meses após a infecção."
+      ]
+    }
+  ]
+}
