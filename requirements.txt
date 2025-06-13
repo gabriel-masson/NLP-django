@@ -1,0 +1,10 @@
+Django==4.2.7
+nltk
+numpy
+pandas
+joblib
+scikit-learn
+scipy
+spacy
+SpeechRecognition==3.10.0
+PyAudio==0.2.13

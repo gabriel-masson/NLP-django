@@ -1,8 +1,12 @@
 from joblib import dump, load
 import json
 import random
+import speech_recognition as sr
 from pathlib import Path
 from Chat_model import Chat_model
+import time
+import speech_recognition as sr
+
 
 # Caminho absoluto da pasta onde está o script atual (em src/)
 src_dir = Path(__file__).resolve().parent
@@ -39,6 +43,51 @@ class Chat:
 
         self.model_arbovirose = Chat_model(
             path_modelo_arbovirose, path_intents_arboviroses)
+
+    def get_audio(self, timeout=5, phrase_time_limit=10):
+        """
+        Captures audio from the microphone and converts it to text using speech recognition.
+        
+        Args:
+            timeout (int): Maximum time in seconds to wait for speech input
+            phrase_time_limit (int): Maximum time in seconds for a single phrase
+            
+        Returns:
+            str: Recognized text or None if recognition fails
+        """
+        recognizer = sr.Recognizer()
+        
+        try:
+            with sr.Microphone() as source:
+                print("Ajustando o ruído ambiente...")
+                recognizer.adjust_for_ambient_noise(source, duration=1)
+                
+                print("Pode falar! Estou ouvindo...")
+                audio = recognizer.listen(
+                    source, 
+                    timeout=timeout, 
+                    phrase_time_limit=phrase_time_limit
+                )
+                
+                print("Processando áudio...")
+                # Recognize speech using Google's speech recognition
+                text = recognizer.recognize_google(audio, language='pt-BR')
+                print(f"Você disse: {text}")
+                return text
+                
+        except sr.WaitTimeoutError:
+            print("Tempo de espera excedido. Nenhum áudio detectado.")
+            return None
+        except sr.UnknownValueError:
+            print("Não foi possível entender o áudio")
+            return None
+        except sr.RequestError as e:
+            print(f"Erro ao acessar o serviço de reconhecimento de fala: {e}")
+            return None
+        except Exception as e:
+            print(f"Erro inesperado: {e}")
+            return None
+
 
 # generate a response based on the user's input
     def answer(self, ask):

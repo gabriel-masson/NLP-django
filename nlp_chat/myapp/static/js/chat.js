@@ -1,12 +1,66 @@
 function initializeChat() {
-    const chatForm = document.getElementById('chatForm');
     const searchInput = document.getElementById('searchInput');
     const messagesContainer = document.getElementById('messagesContainer');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    const voiceButton = document.getElementById('voiceButton');
+    const chatForm = document.getElementById('chatForm');
+    
+    // Speech recognition setup
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    let recognition = null;
+    let isListening = false;
+    
+    // Initialize speech recognition if supported
+    if (SpeechRecognition) {
+        recognition = new SpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'pt-BR';
+        
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            searchInput.value = transcript;
+            // Auto-submit the form if there's text
+            if (transcript.trim()) {
+                chatForm.dispatchEvent(new Event('submit'));
+            }
+        };
+        
+        recognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+            voiceButton.classList.remove('listening');
+            isListening = false;
+        };
+        
+        recognition.onend = () => {
+            voiceButton.classList.remove('listening');
+            isListening = false;
+        };
+    }
+    
+    // Toggle voice recognition
+    function toggleVoiceRecognition() {
+        if (!recognition) {
+            console.warn('Speech recognition not supported in this browser');
+            return;
+        }
+        
+        if (isListening) {
+            recognition.stop();
+        } else {
+            try {
+                recognition.start();
+                voiceButton.classList.add('listening');
+                isListening = true;
+            } catch (error) {
+                console.error('Error starting speech recognition:', error);
+            }
+        }
+    }
     
     // Add welcome message if the chat is empty
     if (messagesContainer.children.length === 0) {
-        addMessage('Hello! I\'m Valeria. How can I help you today?', false);
+        addMessage('Olá Eu sou a Valeria, Como posso ajudar você hoje?', false);
     }
 
     function showTypingIndicator() {
@@ -61,7 +115,7 @@ function initializeChat() {
                 body: JSON.stringify({ message: message })
             });
 
-            alert(response.status);
+            
             console.log(response);
             const data = await response.json();
             
@@ -94,6 +148,7 @@ function initializeChat() {
 
     // Event Listeners
     chatForm.addEventListener('submit', handleSubmit);
+    voiceButton.addEventListener('click', toggleVoiceRecognition);
     
     // Auto-resize textarea
     searchInput.addEventListener('input', function() {
