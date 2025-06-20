@@ -59,7 +59,7 @@ class Chat:
         
         try:
             with sr.Microphone() as source:
-                print("Ajustando o ruído ambiente...")
+                print("Ajustando o ruído ambiente....")
                 recognizer.adjust_for_ambient_noise(source, duration=1)
                 
                 print("Pode falar! Estou ouvindo...")
