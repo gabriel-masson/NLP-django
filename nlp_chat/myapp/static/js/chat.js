@@ -3,7 +3,30 @@ function initializeChat() {
     const messagesContainer = document.getElementById('messagesContainer');
     const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     const voiceButton = document.getElementById('voiceButton');
+    const speakerButton = document.getElementById('speakerButton');
     const chatForm = document.getElementById('chatForm');
+    let audioContext = null;
+    
+    // Initialize audio context on user interaction
+    function initAudioContext() {
+        if (!audioContext) {
+            try {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                console.log('AudioContext created');
+                // Resume the audio context to ensure it's in the 'running' state
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume().then(() => {
+                        console.log('AudioContext resumed successfully');
+                    });
+                }
+                return audioContext;
+            } catch (error) {
+                console.error('Error initializing AudioContext:', error);
+                return null;
+            }
+        }
+        return audioContext;
+    }
     
     // Speech recognition setup
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -52,6 +75,9 @@ function initializeChat() {
                 recognition.start();
                 voiceButton.classList.add('listening');
                 isListening = true;
+                
+                // Initialize audio context if not already done
+                initAudioContext();
             } catch (error) {
                 console.error('Error starting speech recognition:', error);
             }
@@ -60,7 +86,13 @@ function initializeChat() {
     
     // Add welcome message if the chat is empty
     if (messagesContainer.children.length === 0) {
-        addMessage('Olá Eu sou a Valeria, Como posso ajudar você hoje?', false);
+        const welcomeMessage = 'Olá, eu sou a Valéria. Como posso ajudar você hoje?';
+        addMessage(welcomeMessage, false);
+        
+        // Auto-read the welcome message if speaker is enabled
+        if (speakerButton && speakerButton.classList.contains('active')) {
+            sendChatRequest('', true); // Empty message with audio response
+        }
     }
 
     function showTypingIndicator() {
@@ -93,55 +125,145 @@ function initializeChat() {
         }
     }
 
-    function addMessage(message, isUser = false) {
+    function addMessage(message, isUser = false, audioData = null) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user' : 'bot'} mb-4 p-3`;
-        messageDiv.textContent = message;
+        
+        // Create message content container
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        contentDiv.textContent = message;
+        
+        messageDiv.appendChild(contentDiv);
+        
+        // Add speaker button for bot messages with audio support
+        if (!isUser && audioData) {
+            const audioButton = document.createElement('button');
+            audioButton.className = 'speaker-button';
+            audioButton.innerHTML = '🔊';
+            audioButton.title = 'Ouvir mensagem';
+            audioButton.onclick = () => playAudio(audioData);
+            messageDiv.appendChild(audioButton);
+        }
         
         messagesContainer.appendChild(messageDiv);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
-    async function sendMessageToAPI(message) {
-        try {
-            showTypingIndicator();
-            
-            const response = await fetch('/chat/api/chat/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': csrfToken,
-                },
-                body: JSON.stringify({ message: message })
-            });
-
-            
-            console.log(response);
-            const data = await response.json();
+    // Play audio from base64 data
+    function playAudio(base64Data) {
+        return new Promise((resolve, reject) => {
+            try {
+                if (!audioContext) {
+                    initAudioContext();
+                }
+                
+                // Convert base64 to ArrayBuffer
+                const binaryString = atob(base64Data);
+                const bytes = new Uint8Array(binaryString.length);
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                }
+                
+                audioContext.decodeAudioData(bytes.buffer)
+                    .then(decodedData => {
+                        const source = audioContext.createBufferSource();
+                        source.buffer = decodedData;
+                        source.connect(audioContext.destination);
+                        source.start(0);
+                        
+                        source.onended = () => {
+                            resolve();
+                        };
+                    })
+                    .catch(error => {
+                        console.error('Error decoding audio:', error);
+                        reject(error);
+                    });
+            } catch (error) {
+                console.error('Error in playAudio:', error);
+                reject(error);
+            }
+        });
+    }
+    
+    // Send chat request to server
+    function sendChatRequest(message, preferAudio = false) {
+        showTypingIndicator();
+        
+        // Initialize audio context on first interaction if needed
+        if (preferAudio && !audioContext) {
+            initAudioContext();
+        }
+        
+        fetch('/chat/api/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken
+            },
+            body: JSON.stringify({
+                message: message,
+                response_type: preferAudio ? 'audio' : 'text'
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(async data => {
+            hideTypingIndicator();
             
             if (data.status === 'success') {
-                // Remove typing indicator before showing the response
-                hideTypingIndicator();
-                addMessage(data.message, false);
+                // Add bot response to chat
+                const messageElement = addMessage(data.message, false, data.audio || null);
+                
+                // If we have audio data and audio is preferred, play it
+                if (data.audio && preferAudio) {
+                    try {
+                        await playAudio(data.audio);
+                    } catch (error) {
+                        console.error('Error playing audio:', error);
+                    }
+                }
+                return messageElement;
             } else {
-                console.error('Error from server:', data.message);
-                hideTypingIndicator();
-                addMessage('Sorry, I encountered an error. Please try again.', false);
+                console.error('Server error:', data.message);
+                addMessage('Desculpe, ocorreu um erro ao processar sua mensagem.', false);
             }
-        } catch (error) {
-            console.error('Error sending message:', error);
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
             hideTypingIndicator();
-            addMessage('Sorry, I\'m having trouble connecting to the server.', false);
-        }
+            addMessage('Desculpe, ocorreu um erro na comunicação com o servidor.', false);
+        });
     }
 
-    function handleSubmit(e) {
+    // Toggle speaker mode
+    if (speakerButton) {
+        speakerButton.addEventListener('click', function() {
+            this.classList.toggle('active');
+            initAudioContext(); // Initialize audio context on first click
+        });
+    }
+
+    // Handle form submission
+    chatForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const message = searchInput.value.trim();
+        
         if (message) {
+            // Add user message to chat
             addMessage(message, true);
+            
+            // Clear input
             searchInput.value = '';
-            sendMessageToAPI(message);
+            
+            // Send message to server with preferred response type
+            const preferAudio = speakerButton && speakerButton.classList.contains('active');
+            sendChatRequest(message, preferAudio);
         }
         searchInput.focus();
     }

@@ -1,0 +1,177 @@
+/* Chat container */
+#chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Messages container */
+#messagesContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Message styles */
+.message {
+    max-width: 80%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    position: relative;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message.user {
+    margin-left: auto;
+    background-color: #007bff;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+    margin-right: auto;
+    background-color: #f1f1f1;
+    color: #333;
+    border-bottom-left-radius: 4px;
+}
+
+/* Message content */
+.message-content {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Speaker button */
+.speaker-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.speaker-button:hover {
+    opacity: 1;
+}
+
+/* Input area */
+#chatForm {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Voice button */
+#voiceButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#voiceButton.listening {
+    background-color: #dc3545;
+    animation: pulse 1.5s infinite;
+}
+
+/* Speaker mode button */
+#speakerButton {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#speakerButton.active {
+    background-color: #28a745;
+}
+
+/* Typing indicator */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.typing-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #666;
+    margin: 0 2px;
+    animation: typing 1.4s infinite both;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .message {
+        max-width: 90%;
+    }
+    
+    #chatForm {
+        flex-direction: column;
+    }
+    
+    #searchInput {
+        margin-bottom: 10px;
+    }
+}
