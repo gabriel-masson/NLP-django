@@ -61,6 +61,7 @@ function initializeChat() {
         };
     }
     
+    
     // Toggle voice recognition
     function toggleVoiceRecognition() {
         if (!recognition) {
@@ -266,11 +267,14 @@ function initializeChat() {
             sendChatRequest(message, preferAudio);
         }
         searchInput.focus();
-    }
+    });// Added closing parenthesis and semicolon here
 
     // Event Listeners
-    chatForm.addEventListener('submit', handleSubmit);
-    voiceButton.addEventListener('click', toggleVoiceRecognition);
+    try {
+        voiceButton.addEventListener('click', toggleVoiceRecognition);
+    } catch (error) {
+        console.error('Error in event listeners:', error);
+    }
     
     // Auto-resize textarea
     searchInput.addEventListener('input', function() {
