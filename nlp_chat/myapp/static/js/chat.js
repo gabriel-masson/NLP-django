@@ -196,7 +196,7 @@ function initializeChat() {
             initAudioContext();
         }
         
-        fetch('/chat/api/', {
+        fetch('/chat/api/chat/',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
